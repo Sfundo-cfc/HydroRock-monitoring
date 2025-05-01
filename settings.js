@@ -21,6 +21,15 @@
  **/
 
 module.exports = {
+    
+    adminAuth: {
+        type: "credentials",
+        users: [{
+            username: "admin",
+            password: "$2a$12$Lk1NU9sQGd8f7L6ce5kUKelMro.WQ8TF/B3ed/DqWfGQAJNsmgV.q",
+            permissions: "*"
+        }]
+    },
 
 /*******************************************************************************
  * Flow File and User Directory Settings
