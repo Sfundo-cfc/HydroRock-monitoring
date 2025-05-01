@@ -1,0 +1,906 @@
+[
+    {
+        "id": "f56a74b2f85b2819",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b6d0a82d6a699f04",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d9f95bfeeb8884ae",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e6e5c01f9c236342",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b8678fa50e575b43",
+        "type": "ui_tab",
+        "name": "Hydroponics Overview",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5a96461c9d46ede9",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#3c3e3e",
+                "baseFont": "Impact,Impact,Charcoal,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "Lucida Sans Unicode,Lucida Grande,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Lucida Sans Unicode,Lucida Grande,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a14db7f608f3094a",
+        "type": "ui_tab",
+        "name": "hydoponics",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4e7b9317bdd78cb1",
+        "type": "ui_group",
+        "name": "sensors",
+        "tab": "b8678fa50e575b43",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1aac14b08d6d4c2b",
+        "type": "ui_spacer",
+        "z": "f56a74b2f85b2819",
+        "name": "spacer",
+        "group": "4e7b9317bdd78cb1",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "76c83f3964eb0fa5",
+        "type": "mqtt-broker",
+        "name": "Hydroponics_Broker",
+        "broker": "978517f2907249cfbfce3caab5098d15.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "dashboard_tab",
+        "type": "ui_tab",
+        "name": "Hydroponics Monitor",
+        "icon": "dashboard",
+        "order": 3
+    },
+    {
+        "id": "dashboard_group",
+        "type": "ui_group",
+        "name": "Hydroponics Dashboard",
+        "tab": "dashboard_tab",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "6ecb63b3e518ec91",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "dashboard_tab",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "036a4b4e28a093ae",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "dashboard_tab",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2b0e26a7a652a976",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "4f446018a6ee5f73",
+        "type": "ui_group",
+        "name": "Live Gauges",
+        "tab": "b8678fa50e575b43",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "97248dd911b28908",
+        "type": "ui_group",
+        "name": "Trends",
+        "tab": "b8678fa50e575b43",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2a8db5909213e1ec",
+        "type": "ui_group",
+        "name": "Status & Alerts!",
+        "tab": "b8678fa50e575b43",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a86a1f187fc07c3",
+        "type": "ui_spacer",
+        "z": "f56a74b2f85b2819",
+        "name": "spacer",
+        "group": "2a8db5909213e1ec",
+        "order": 3,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "26c8cafbcd9db77e",
+        "type": "mqtt-broker",
+        "name": "TestConn",
+        "broker": "978517f2907249cfbfce3caab5098d15.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "2b0e26a7a652a976",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ac9fb25d93a9e072",
+        "type": "twilio-api",
+        "name": "",
+        "sid": "AC806914e6879139eb2b8c0671c260cee2",
+        "from": "+19786620809"
+    },
+    {
+        "id": "1c0d9ddbc83a682d",
+        "type": "ui_link",
+        "name": "Link 4",
+        "link": "https://www.qtsweb.co.za/",
+        "icon": "open_in_browser",
+        "target": "newtab",
+        "order": 2
+    },
+    {
+        "id": "1bde3c1ff86dbfbd",
+        "type": "function",
+        "z": "f56a74b2f85b2819",
+        "name": "Separate Outputs",
+        "func": "let temperature  = msg.payload.temperature  ?? 0;\nlet humidity     = msg.payload.humidity     ?? 0;\nlet water_level  = msg.payload.water_level  ?? \"Unknown\";\n\nlet tempMsg       = { payload: temperature, humidity: humidity };\nlet humidityMsg   = { payload: humidity };\nlet waterLevelMsg = { payload: String(water_level) };\n\nreturn [tempMsg, humidityMsg, waterLevelMsg];\n",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 440,
+        "wires": [
+            [
+                "b19ee4d2fcb34b67",
+                "188523fe43fcf186",
+                "d1367622f0997fb3",
+                "d290b7225beb59f6"
+            ],
+            [
+                "31efa2381191f1cf",
+                "2a2cbcb04b77096e",
+                "63f90a15952e285b"
+            ],
+            [
+                "a38a21e08340013a",
+                "37f98586d990bfb7"
+            ]
+        ]
+    },
+    {
+        "id": "b19ee4d2fcb34b67",
+        "type": "ui_gauge",
+        "z": "f56a74b2f85b2819",
+        "name": "Temperature Gauge",
+        "group": "4f446018a6ee5f73",
+        "order": 2,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Temperature (°C)",
+        "label": "°C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 50,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "30",
+        "seg2": "40",
+        "diff": false,
+        "className": "",
+        "x": 1780,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "31efa2381191f1cf",
+        "type": "ui_gauge",
+        "z": "f56a74b2f85b2819",
+        "name": "Humidity Gauge",
+        "group": "4f446018a6ee5f73",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "gtype": "gage",
+        "title": "Humidity (%)",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 100,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 1960,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "37f98586d990bfb7",
+        "type": "ui_text",
+        "z": "f56a74b2f85b2819",
+        "group": "4f446018a6ee5f73",
+        "order": 1,
+        "width": 4,
+        "height": 2,
+        "name": "Water Level Text",
+        "label": "Water Level",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1610,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "a9ff1cdb333555f9",
+        "type": "ui_chart",
+        "z": "f56a74b2f85b2819",
+        "name": "Humidity Chart",
+        "group": "97248dd911b28908",
+        "order": 2,
+        "width": 6,
+        "height": 4,
+        "label": "Humidity (%) Over Time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "1",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1900,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "188523fe43fcf186",
+        "type": "function",
+        "z": "f56a74b2f85b2819",
+        "name": "Check Alerts",
+        "func": "let alerts = [];\n\n// msg.payload contains temperature\nif (msg.payload > 30) {\n    alerts.push(`High Temperature: ${msg.payload}°C`);\n}\n\n// We passed humidity along in tempMsg earlier\nif (msg.humidity !== undefined && msg.humidity > 80) {\n    alerts.push(`High Humidity: ${msg.humidity}%`);\n}\n\nif (alerts.length > 0) {\n    msg.payload = alerts.join(\" | \");\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "x": 1250,
+        "y": 540,
+        "wires": [
+            [
+                "a5a34b12a9233c04"
+            ]
+        ]
+    },
+    {
+        "id": "a5a34b12a9233c04",
+        "type": "ui_toast",
+        "z": "f56a74b2f85b2819",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "Alert",
+        "name": "Show Alert",
+        "x": 1250,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5adf01b48120d17e",
+        "type": "mqtt in",
+        "z": "f56a74b2f85b2819",
+        "name": "ESP32 Sensor Data",
+        "topic": "#",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "26c8cafbcd9db77e",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 810,
+        "y": 440,
+        "wires": [
+            [
+                "8a30a3a959914a0c",
+                "1bde3c1ff86dbfbd"
+            ]
+        ]
+    },
+    {
+        "id": "a38a21e08340013a",
+        "type": "debug",
+        "z": "f56a74b2f85b2819",
+        "name": "Water Level_debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "2a2cbcb04b77096e",
+        "type": "debug",
+        "z": "f56a74b2f85b2819",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1580,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "d1367622f0997fb3",
+        "type": "debug",
+        "z": "f56a74b2f85b2819",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1560,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8a30a3a959914a0c",
+        "type": "debug",
+        "z": "f56a74b2f85b2819",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c0e362f4f63a66d3",
+        "type": "ui_chart",
+        "z": "f56a74b2f85b2819",
+        "name": "Temperature Chart",
+        "group": "97248dd911b28908",
+        "order": 1,
+        "width": 6,
+        "height": 4,
+        "label": "Temperature (℃) Over Time",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "60",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "1",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1530,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d290b7225beb59f6",
+        "type": "function",
+        "z": "f56a74b2f85b2819",
+        "name": "Burst for Temp Chart",
+        "func": "// create a 2-point burst so the chart always draws a line\nconst prev = context.get(\"prev\") ?? msg.payload;   // if no prev, repeat current\ncontext.set(\"prev\", msg.payload);\n\n// send the previous value immediately ...\nnode.send({ payload: prev });\n\n// ... then the current value\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 320,
+        "wires": [
+            [
+                "c0e362f4f63a66d3"
+            ]
+        ]
+    },
+    {
+        "id": "63f90a15952e285b",
+        "type": "function",
+        "z": "f56a74b2f85b2819",
+        "name": "Burst for Humidity Chart",
+        "func": "// create a 2-point burst so the chart always draws a line\nconst prev = context.get(\"prev\") ?? msg.payload;   // if no prev, repeat current\ncontext.set(\"prev\", msg.payload);\n\n// send the previous value immediately ...\nnode.send({ payload: prev });\n\n// ... then the current value\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1590,
+        "y": 520,
+        "wires": [
+            [
+                "a9ff1cdb333555f9"
+            ]
+        ]
+    },
+    {
+        "id": "5675fb37e7d0499e",
+        "type": "inject",
+        "z": "b6d0a82d6a699f04",
+        "name": "Reminder",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Check Up on Hydroponic",
+        "payload": "",
+        "payloadType": "date",
+        "x": 270,
+        "y": 280,
+        "wires": [
+            [
+                "69a9d2619d1b4a74"
+            ]
+        ]
+    },
+    {
+        "id": "69a9d2619d1b4a74",
+        "type": "function",
+        "z": "b6d0a82d6a699f04",
+        "name": "Check_Timer",
+        "func": "// only pass msg on if ≥ interval since last ack\nconst last  = flow.get(\"lastAck\") || 0;\nconst now   = Date.now();\n// for testing 5 min = 5*60*1000; later change to 4*24*60*60*1000\nconst interval = 1*60*1000;\n\nif (now - last >= interval) {\n  // inside your Check Timer function, before return msg:\n  msg.topic   = \"🌱 Hydroponics Check Due\";\n  msg.payload = \"Time to inspect your system and then click 'I’ve checked' in the dashboard.\";\n  return msg;\n\n}\nreturn null;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "200f030e8285b868"
+            ]
+        ]
+    },
+    {
+        "id": "200f030e8285b868",
+        "type": "e-mail",
+        "z": "b6d0a82d6a699f04",
+        "server": "smtp.gmail.com",
+        "port": "465",
+        "authtype": "BASIC",
+        "saslformat": true,
+        "token": "oauth2Response.access_token",
+        "secure": true,
+        "tls": true,
+        "name": "sudosfundo01@gmail.com",
+        "dname": "mail Reminder",
+        "x": 400,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "314e3def2db764a9",
+        "type": "inject",
+        "z": "b6d0a82d6a699f04",
+        "name": "test mail",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Hydro",
+        "payload": "This is a test message from Node-RED.",
+        "payloadType": "str",
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [
+                "200f030e8285b868"
+            ]
+        ]
+    },
+    {
+        "id": "1b0f1c344e5f76d6",
+        "type": "ui_button",
+        "z": "d9f95bfeeb8884ae",
+        "name": "",
+        "group": "2a8db5909213e1ec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "System Checked 👍",
+        "tooltip": "",
+        "color": "green",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 380,
+        "wires": [
+            [
+                "b0c5b2260c8d4daf"
+            ]
+        ]
+    },
+    {
+        "id": "b0c5b2260c8d4daf",
+        "type": "function",
+        "z": "d9f95bfeeb8884ae",
+        "name": "Record ack",
+        "func": "// when you press “I’ve checked”:\nflow.set(\"lastAck\", Date.now());\n// send an alert message for the dashboard\nmsg.payload = \"✅ System checked at \" + new Date().toLocaleTimeString();\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "8f605b2175db4028",
+                "6059da7575bf1b39"
+            ]
+        ]
+    },
+    {
+        "id": "8f605b2175db4028",
+        "type": "ui_text",
+        "z": "d9f95bfeeb8884ae",
+        "group": "2a8db5909213e1ec",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Hydropoic Last checked at:",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 240,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6059da7575bf1b39",
+        "type": "ui_toast",
+        "z": "d9f95bfeeb8884ae",
+        "position": "top left",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 310,
+        "y": 280,
+        "wires": []
+    }
+]
